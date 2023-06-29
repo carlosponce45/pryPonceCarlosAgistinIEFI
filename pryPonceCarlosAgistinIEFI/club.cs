@@ -23,7 +23,7 @@ namespace pryPonceCarlosAgistinIEFI
 
             commandbasedato.Connection = cobasedato;
             commandbasedato.CommandType = CommandType.Text;
-            commandbasedato.CommandText = "SELECT NOMBRE_PAIS FROM PAISES WHERE NOMBRE_PAIS = ?";
+            commandbasedato.CommandText = "SELECT Pais FROM PAISES WHERE Pais = ?";
             commandbasedato.Parameters.AddWithValue("@Pais", nombrePais);
 
             commandbasedato.Connection.Open();
@@ -39,7 +39,7 @@ namespace pryPonceCarlosAgistinIEFI
             MessageBox.Show("el pais fue agregado exitosamente");
             readerbasedato.Close();
 
-            commandbasedato.CommandText = "INSERT INTO PAISES (NOMBRE_PAIS) VALUES (?)";
+            commandbasedato.CommandText = "INSERT INTO PAISES (Pais) VALUES (?)";
             commandbasedato.Parameters.AddWithValue("@Pais", nombrePais.Trim());
 
             commandbasedato.ExecuteNonQuery();

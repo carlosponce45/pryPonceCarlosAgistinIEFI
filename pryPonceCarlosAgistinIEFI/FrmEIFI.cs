@@ -35,7 +35,7 @@ namespace pryPonceCarlosAgistinIEFI
             }
             else
             {
-                Club objConn = new Club();
+                club objConn = new club();
                 objConn.cargarPais(txtPais.Text);
                 objConn.cargarCombo(cmbpais);
             }
